@@ -1,0 +1,11 @@
+---
+- hosts: group1
+  tasks: 
+    - name: git_installation
+      apt: 
+        name: git
+        state: latest
+    - name: copy_module
+      copy:      
+          src: /home/ubuntu/1.yml
+          dest: /home/ubuntu
